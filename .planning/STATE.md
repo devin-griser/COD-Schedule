@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-03-01T12:47:54.694Z"
+status: in-progress
+last_updated: "2026-03-01T13:54:03Z"
 progress:
-  total_phases: 1
+  total_phases: 3
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 6
+  completed_plans: 4
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-28)
 
 **Core value:** Users can instantly see the next upcoming CDL matches with teams, times, and stream links — nothing else getting in the way.
-**Current focus:** Phase 1 — Foundation
+**Current focus:** Phase 2 — Schedule Display
 
 ## Current Position
 
-Phase: 1 of 3 (Foundation) — COMPLETE
-Plan: 3 of 3 in current phase — COMPLETE
-Status: Phase 1 complete — Phase 2 UI work is unblocked
-Last activity: 2026-03-01 — Plan 01-03 complete: 12 team franchises, logos, and curated 10-match schedule fixture data
+Phase: 2 of 3 (Schedule Display) — IN PROGRESS
+Plan: 1 of 3 in current phase — COMPLETE
+Status: Plan 02-01 complete — infrastructure and data utilities ready for component plans 02-02 and 02-03
+Last activity: 2026-03-01 — Plan 02-01 complete: data utilities, hooks, dark theme, Inter font, React Query provider
 
-Progress: [█████░░░░░] 55%
+Progress: [███████░░░] 67%
 
 ## Performance Metrics
 
@@ -41,13 +41,15 @@ Progress: [█████░░░░░] 55%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 3/3 | ~57 min | ~19 min |
+| 02-schedule-display | 1/3 | ~2 min | ~2 min |
 
 **Recent Trend:**
-- Last 5 plans: Plan 01-01 (~30min), Plan 01-02 (~20min), Plan 01-03 (~7min)
+- Last 5 plans: Plan 01-01 (~30min), Plan 01-02 (~20min), Plan 01-03 (~7min), Plan 02-01 (~2min)
 - Trend: Accelerating
 
 *Updated after each plan completion*
 | Phase 01-foundation P03 | 7 | 2 tasks | 14 files |
+| Phase 02-schedule-display P01 | 2 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -70,18 +72,21 @@ Recent decisions affecting current work:
 - Plan 01-02: Phase 3 automation path unlocked — fetch-schedule.ts can be scheduled as cron/CI step for automated refresh
 - [Phase 01-foundation]: Plan 01-03: Logo placeholder strategy — colored-circle PNGs for teams blocked by Liquipedia rate limiting; real logos replaceable without code changes
 - [Phase 01-foundation]: Plan 01-03: Schedule curated to 10 matches (from 87) with TBD-opponent edge case — covers all status types and 3 tournament stages
+- [Phase 02-schedule-display]: Plan 02-01: Intl.DateTimeFormat for time formatting — respects locale 12h/24h preference for EU fans (not date-fns format)
+- [Phase 02-schedule-display]: Plan 02-01: TZDate for all timezone conversions — avoids UTC string slice pitfall for midnight-crossing matches
+- [Phase 02-schedule-display]: Plan 02-01: staleTime: Infinity for React Query — schedule.json is static, no re-fetch ever needed
+- [Phase 02-schedule-display]: Plan 02-01: Inter font via Google Fonts CDN link — zero bundle cost, Cloudflare Pages has no CDN restrictions
 
 ### Pending Todos
 
-- None (Phase 1 fully complete — all 3 plans done)
-- Note: 11 of 12 team logos are colored-circle placeholders (Liquipedia rate-limited). Real logos can be swapped in during Phase 2 without code changes.
+- Note: 11 of 12 team logos are colored-circle placeholders (Liquipedia rate-limited). Real logos can be swapped in without code changes.
 
 ### Blockers/Concerns
 
-- None — Phase 1 complete. Phase 2 UI work is fully unblocked. All data contracts, fixture data, and team assets are in place.
+- None — Plan 02-01 complete. Plans 02-02 and 02-03 (component rendering) are fully unblocked. All data utilities, hooks, and infrastructure are in place.
 
 ## Session Continuity
 
 Last session: 2026-03-01
-Stopped at: Completed Plan 01-03 — Phase 1 complete, ready to start Phase 2 UI
-Resume file: .planning/phases/02-ui/ (next phase)
+Stopped at: Completed Plan 02-01 — data utilities and infrastructure complete, ready for 02-02 (SchedulePage + MatchSection components)
+Resume file: .planning/phases/02-schedule-display/02-02-PLAN.md

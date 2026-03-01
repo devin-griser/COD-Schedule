@@ -41,7 +41,7 @@ Three phases take this project from nothing to a publicly-deployed CDL schedule 
   4. The app uses a dark theme with sharp typography and no distracting UI chrome — no ads, nav clutter, or marketing
   5. The layout works at 375px minimum and scales cleanly to desktop
 **Plans**: 3 plans
-  - [ ] 02-01-PLAN.md — Infrastructure + data layer (dark theme, Inter font, React Query, utility functions, hooks)
+  - [x] 02-01-PLAN.md — Infrastructure + data layer (dark theme, Inter font, React Query, utility functions, hooks) (complete — utilities, hooks, global styles all done)
   - [ ] 02-02-PLAN.md — Component library (TeamLogo, TeamSlot, MatchCard, SkeletonCard, ErrorState)
   - [ ] 02-03-PLAN.md — Page assembly + visual verification (SchedulePage, MatchSection, DateGroup, App.tsx wiring)
 
@@ -63,5 +63,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete    | 2026-03-01 |
-| 2. Schedule Display | 0/3 | Planning complete | - |
+| 2. Schedule Display | 1/3 | In progress | - |
 | 3. Live Pipeline + Enhancements | 0/TBD | Not started | - |
