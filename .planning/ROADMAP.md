@@ -25,7 +25,10 @@ Three phases take this project from nothing to a publicly-deployed CDL schedule 
   2. PandaScore API has been called live and either confirmed to return 2026 CDL matches, or a fallback path (Liquipedia/manual JSON) has been chosen and documented
   3. `schedule.json` contains 5-10 real hardcoded matches with the finalized schema (UTC ISO 8601 times, both teams, stream links, scores, tournament context)
   4. `teams.json` contains all 12 CDL franchises keyed by stable ID with logo paths and placeholder fallbacks
-**Plans**: TBD
+**Plans**: 3 plans
+  - [ ] 01-01-PLAN.md — Project scaffold + schema contracts + Cloudflare Pages deploy
+  - [ ] 01-02-PLAN.md — PandaScore API validation + fetch script + data source decision
+  - [ ] 01-03-PLAN.md — Populate teams.json + schedule.json + team logos
 
 ### Phase 2: Schedule Display
 **Goal**: Users can see the full CDL schedule — upcoming matches and completed results — in a clean, dark, mobile-first app that converts times to their local timezone
@@ -56,6 +59,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Not started | - |
 | 2. Schedule Display | 0/TBD | Not started | - |
 | 3. Live Pipeline + Enhancements | 0/TBD | Not started | - |
