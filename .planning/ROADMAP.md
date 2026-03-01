@@ -28,7 +28,7 @@ Three phases take this project from nothing to a publicly-deployed CDL schedule 
 **Plans**: 3 plans
   - [x] 01-01-PLAN.md — Project scaffold + schema contracts + Cloudflare Pages deploy (complete — live at https://cod-schedule.devingriser.workers.dev/)
   - [x] 01-02-PLAN.md — PandaScore API validation + fetch script + data source decision (complete — 87 CDL matches confirmed, schedule.json populated)
-  - [ ] 01-03-PLAN.md — Populate teams.json + schedule.json + team logos
+  - [x] 01-03-PLAN.md — Populate teams.json + schedule.json + team logos (complete — 12 teams, 10 curated matches with TBD edge case)
 
 ### Phase 2: Schedule Display
 **Goal**: Users can see the full CDL schedule — upcoming matches and completed results — in a clean, dark, mobile-first app that converts times to their local timezone
@@ -40,7 +40,10 @@ Three phases take this project from nothing to a publicly-deployed CDL schedule 
   3. Each match card shows the tournament/stage context (e.g., "Major II Qualifiers — Week 3")
   4. The app uses a dark theme with sharp typography and no distracting UI chrome — no ads, nav clutter, or marketing
   5. The layout works at 375px minimum and scales cleanly to desktop
-**Plans**: TBD
+**Plans**: 3 plans
+  - [ ] 02-01-PLAN.md — Infrastructure + data layer (dark theme, Inter font, React Query, utility functions, hooks)
+  - [ ] 02-02-PLAN.md — Component library (TeamLogo, TeamSlot, MatchCard, SkeletonCard, ErrorState)
+  - [ ] 02-03-PLAN.md — Page assembly + visual verification (SchedulePage, MatchSection, DateGroup, App.tsx wiring)
 
 ### Phase 3: Live Pipeline + Enhancements
 **Goal**: The schedule updates automatically from a live data source, and users can hide spoilers and access VOD replays
@@ -60,5 +63,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete    | 2026-03-01 |
-| 2. Schedule Display | 0/TBD | Not started | - |
+| 2. Schedule Display | 0/3 | Planning complete | - |
 | 3. Live Pipeline + Enhancements | 0/TBD | Not started | - |
