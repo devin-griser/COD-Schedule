@@ -1,3 +1,124 @@
 {
-  "teams": []
+  "teams": [
+    {
+      "id": "boston-breach",
+      "fullName": "Boston Breach",
+      "shortName": "Breach",
+      "city": "Boston",
+      "primaryColor": "#00A651",
+      "secondaryColor": "#1A1A2E",
+      "logoPath": "/teams/boston-breach.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "carolina-royal-ravens",
+      "fullName": "Carolina Royal Ravens",
+      "shortName": "Ravens",
+      "city": "Carolina",
+      "primaryColor": "#00B4E4",
+      "secondaryColor": "#0D0D1A",
+      "logoPath": "/teams/carolina-royal-ravens.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "cloud9-new-york",
+      "fullName": "Cloud9 New York",
+      "shortName": "C9 NY",
+      "city": "New York",
+      "primaryColor": "#4A90D9",
+      "secondaryColor": "#1A1A2E",
+      "logoPath": "/teams/cloud9-new-york.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "faze-vegas",
+      "fullName": "FaZe Vegas",
+      "shortName": "FaZe",
+      "city": "Las Vegas",
+      "primaryColor": "#FF0000",
+      "secondaryColor": "#1A1A1A",
+      "logoPath": "/teams/faze-vegas.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "g2-minnesota",
+      "fullName": "G2 Minnesota",
+      "shortName": "G2",
+      "city": "Minnesota",
+      "primaryColor": "#6DBE45",
+      "secondaryColor": "#1A1A1A",
+      "logoPath": "/teams/g2-minnesota.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "los-angeles-thieves",
+      "fullName": "Los Angeles Thieves",
+      "shortName": "Thieves",
+      "city": "Los Angeles",
+      "primaryColor": "#E8002D",
+      "secondaryColor": "#1A1A1A",
+      "logoPath": "/teams/los-angeles-thieves.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "miami-heretics",
+      "fullName": "Miami Heretics",
+      "shortName": "Heretics",
+      "city": "Miami",
+      "primaryColor": "#FF6B35",
+      "secondaryColor": "#1A1A2E",
+      "logoPath": "/teams/miami-heretics.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "optic-texas",
+      "fullName": "OpTic Texas",
+      "shortName": "OpTic",
+      "city": "Texas",
+      "primaryColor": "#4CAF50",
+      "secondaryColor": "#1A1A1A",
+      "logoPath": "/teams/optic-texas.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "paris-gentle-mates",
+      "fullName": "Paris Gentle Mates",
+      "shortName": "GentleMates",
+      "city": "Paris",
+      "primaryColor": "#B8860B",
+      "secondaryColor": "#1A1A2E",
+      "logoPath": "/teams/paris-gentle-mates.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "riyadh-falcons",
+      "fullName": "Riyadh Falcons",
+      "shortName": "Falcons",
+      "city": "Riyadh",
+      "primaryColor": "#00A550",
+      "secondaryColor": "#1A1A1A",
+      "logoPath": "/teams/riyadh-falcons.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "toronto-koi",
+      "fullName": "Toronto KOI",
+      "shortName": "KOI",
+      "city": "Toronto",
+      "primaryColor": "#E91E8C",
+      "secondaryColor": "#1A1A2E",
+      "logoPath": "/teams/toronto-koi.png",
+      "logoFallback": "/teams/placeholder.png"
+    },
+    {
+      "id": "vancouver-surge",
+      "fullName": "Vancouver Surge",
+      "shortName": "Surge",
+      "city": "Vancouver",
+      "primaryColor": "#00C7B5",
+      "secondaryColor": "#1A1A2E",
+      "logoPath": "/teams/vancouver-surge.png",
+      "logoFallback": "/teams/placeholder.png"
+    }
+  ]
 }
