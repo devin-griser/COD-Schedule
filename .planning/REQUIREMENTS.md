@@ -65,27 +65,27 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | — | Pending |
-| DATA-02 | — | Pending |
-| DATA-03 | — | Pending |
-| SCHED-01 | — | Pending |
-| SCHED-02 | — | Pending |
-| SCHED-03 | — | Pending |
-| SCHED-04 | — | Pending |
-| SCHED-05 | — | Pending |
-| SCHED-06 | — | Pending |
-| SCHED-07 | — | Pending |
-| DSGN-01 | — | Pending |
-| DSGN-02 | — | Pending |
-| DSGN-03 | — | Pending |
-| XTRA-01 | — | Pending |
-| XTRA-02 | — | Pending |
+| DATA-01 | Phase 1 | Pending |
+| DATA-02 | Phase 1 | Pending |
+| DATA-03 | Phase 1 | Pending |
+| SCHED-01 | Phase 2 | Pending |
+| SCHED-02 | Phase 2 | Pending |
+| SCHED-03 | Phase 2 | Pending |
+| SCHED-04 | Phase 2 | Pending |
+| SCHED-05 | Phase 2 | Pending |
+| SCHED-06 | Phase 2 | Pending |
+| SCHED-07 | Phase 2 | Pending |
+| DSGN-01 | Phase 2 | Pending |
+| DSGN-02 | Phase 2 | Pending |
+| DSGN-03 | Phase 2 | Pending |
+| XTRA-01 | Phase 3 | Pending |
+| XTRA-02 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 15 total
-- Mapped to phases: 0
-- Unmapped: 15 ⚠️
+- Mapped to phases: 15
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-28*
-*Last updated: 2026-02-28 after initial definition*
+*Last updated: 2026-02-28 after roadmap creation*
