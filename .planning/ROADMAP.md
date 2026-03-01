@@ -27,7 +27,7 @@ Three phases take this project from nothing to a publicly-deployed CDL schedule 
   4. `teams.json` contains all 12 CDL franchises keyed by stable ID with logo paths and placeholder fallbacks
 **Plans**: 3 plans
   - [x] 01-01-PLAN.md — Project scaffold + schema contracts + Cloudflare Pages deploy (complete — live at https://cod-schedule.devingriser.workers.dev/)
-  - [ ] 01-02-PLAN.md — PandaScore API validation + fetch script + data source decision
+  - [x] 01-02-PLAN.md — PandaScore API validation + fetch script + data source decision (complete — 87 CDL matches confirmed, schedule.json populated)
   - [ ] 01-03-PLAN.md — Populate teams.json + schedule.json + team logos
 
 ### Phase 2: Schedule Display
@@ -59,6 +59,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/3 | In progress | - |
+| 1. Foundation | 2/3 | In progress | - |
 | 2. Schedule Display | 0/TBD | Not started | - |
 | 3. Live Pipeline + Enhancements | 0/TBD | Not started | - |
