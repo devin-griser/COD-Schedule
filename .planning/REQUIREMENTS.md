@@ -18,16 +18,16 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **SCHED-01**: User can see a list of upcoming CDL matches in chronological order
 - [x] **SCHED-02**: User can see completed CDL matches with final scores
 - [x] **SCHED-03**: Upcoming and completed matches are visually distinct sections
-- [ ] **SCHED-04**: Each match card shows both team names and logos
+- [x] **SCHED-04**: Each match card shows both team names and logos
 - [x] **SCHED-05**: Each match card shows the match date and time in the user's local timezone
-- [ ] **SCHED-06**: Each match card shows a stream link to watch live
-- [ ] **SCHED-07**: Each match card shows tournament/stage context (e.g., "Major II Qualifiers — Week 3")
+- [x] **SCHED-06**: Each match card shows a stream link to watch live
+- [x] **SCHED-07**: Each match card shows tournament/stage context (e.g., "Major II Qualifiers — Week 3")
 
 ### Design
 
 - [x] **DSGN-01**: App uses a dark/moody theme with clean, sharp typography
-- [ ] **DSGN-02**: Layout is mobile-first and responsive (works at 375px minimum, scales to desktop)
-- [ ] **DSGN-03**: Page is clean and single-purpose — no ads, no marketing, no noise
+- [x] **DSGN-02**: Layout is mobile-first and responsive (works at 375px minimum, scales to desktop)
+- [x] **DSGN-03**: Page is clean and single-purpose — no ads, no marketing, no noise
 
 ### Extras
 
@@ -71,13 +71,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SCHED-01 | Phase 2 | Complete (02-01) |
 | SCHED-02 | Phase 2 | Complete (02-01) |
 | SCHED-03 | Phase 2 | Complete (02-01) |
-| SCHED-04 | Phase 2 | Pending |
+| SCHED-04 | Phase 2 | Complete (02-02) |
 | SCHED-05 | Phase 2 | Complete (02-01) |
-| SCHED-06 | Phase 2 | Pending |
-| SCHED-07 | Phase 2 | Pending |
+| SCHED-06 | Phase 2 | Complete (02-02) |
+| SCHED-07 | Phase 2 | Complete (02-02) |
 | DSGN-01 | Phase 2 | Complete (02-01) |
-| DSGN-02 | Phase 2 | Pending |
-| DSGN-03 | Phase 2 | Pending |
+| DSGN-02 | Phase 2 | Complete (02-02) |
+| DSGN-03 | Phase 2 | Complete (02-02) |
 | XTRA-01 | Phase 3 | Pending |
 | XTRA-02 | Phase 3 | Pending |
 
@@ -88,4 +88,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-28*
-*Last updated: 2026-03-01 after Plan 02-01 execution (SCHED-01, SCHED-02, SCHED-03, SCHED-05, DSGN-01 marked complete)*
+*Last updated: 2026-03-01 after Plan 02-02 execution (SCHED-04, SCHED-06, SCHED-07, DSGN-02, DSGN-03 marked complete)*

@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in-progress
-last_updated: "2026-03-01T13:54:03Z"
+last_updated: "2026-03-01T13:58:44Z"
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 6
-  completed_plans: 4
+  completed_plans: 5
 ---
 
 # Project State
@@ -23,11 +23,11 @@ See: .planning/PROJECT.md (updated 2026-02-28)
 ## Current Position
 
 Phase: 2 of 3 (Schedule Display) — IN PROGRESS
-Plan: 1 of 3 in current phase — COMPLETE
-Status: Plan 02-01 complete — infrastructure and data utilities ready for component plans 02-02 and 02-03
-Last activity: 2026-03-01 — Plan 02-01 complete: data utilities, hooks, dark theme, Inter font, React Query provider
+Plan: 2 of 3 in current phase — COMPLETE
+Status: Plan 02-02 complete — all match display components ready for page assembly in 02-03
+Last activity: 2026-03-01 — Plan 02-02 complete: TeamLogo, TeamSlot, MatchCard, SkeletonCard, ErrorState components
 
-Progress: [███████░░░] 67%
+Progress: [████████░░] 83%
 
 ## Performance Metrics
 
@@ -41,15 +41,16 @@ Progress: [███████░░░] 67%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 3/3 | ~57 min | ~19 min |
-| 02-schedule-display | 1/3 | ~2 min | ~2 min |
+| 02-schedule-display | 2/3 | ~4 min | ~2 min |
 
 **Recent Trend:**
-- Last 5 plans: Plan 01-01 (~30min), Plan 01-02 (~20min), Plan 01-03 (~7min), Plan 02-01 (~2min)
+- Last 5 plans: Plan 01-01 (~30min), Plan 01-02 (~20min), Plan 01-03 (~7min), Plan 02-01 (~2min), Plan 02-02 (~2min)
 - Trend: Accelerating
 
 *Updated after each plan completion*
 | Phase 01-foundation P03 | 7 | 2 tasks | 14 files |
 | Phase 02-schedule-display P01 | 2 | 2 tasks | 7 files |
+| Phase 02-schedule-display P02 | 2 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -76,6 +77,10 @@ Recent decisions affecting current work:
 - [Phase 02-schedule-display]: Plan 02-01: TZDate for all timezone conversions — avoids UTC string slice pitfall for midnight-crossing matches
 - [Phase 02-schedule-display]: Plan 02-01: staleTime: Infinity for React Query — schedule.json is static, no re-fetch ever needed
 - [Phase 02-schedule-display]: Plan 02-01: Inter font via Google Fonts CDN link — zero bundle cost, Cloudflare Pages has no CDN restrictions
+- [Phase 02-schedule-display]: Plan 02-02: MatchCard is <a> element (not div+onClick) — whole card tappable, semantically correct, keyboard navigable
+- [Phase 02-schedule-display]: Plan 02-02: CSS custom property --team-color via style prop for dynamic team colors — Tailwind v4 pattern, dynamic class interpolation is purged at build time
+- [Phase 02-schedule-display]: Plan 02-02: typeof string check for TBD guard — prevents .id access crash on 'TBD' string
+- [Phase 02-schedule-display]: Plan 02-02: errored boolean guard in TeamLogo — prevents infinite re-render loop if fallback logo also 404s
 
 ### Pending Todos
 
@@ -83,10 +88,10 @@ Recent decisions affecting current work:
 
 ### Blockers/Concerns
 
-- None — Plan 02-01 complete. Plans 02-02 and 02-03 (component rendering) are fully unblocked. All data utilities, hooks, and infrastructure are in place.
+- None — Plan 02-02 complete. Plan 02-03 (page assembly) is fully unblocked. All components ready to compose.
 
 ## Session Continuity
 
 Last session: 2026-03-01
-Stopped at: Completed Plan 02-01 — data utilities and infrastructure complete, ready for 02-02 (SchedulePage + MatchSection components)
-Resume file: .planning/phases/02-schedule-display/02-02-PLAN.md
+Stopped at: Completed Plan 02-02 — match display components complete, ready for 02-03 (page layout and assembly)
+Resume file: .planning/phases/02-schedule-display/02-03-PLAN.md
