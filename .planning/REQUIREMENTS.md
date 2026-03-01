@@ -10,8 +10,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Data
 
 - [ ] **DATA-01**: App has a reliable source of CDL match schedule data (API or manual JSON)
-- [ ] **DATA-02**: Match data includes teams, date/time (UTC), scores, stream links, and tournament context
-- [ ] **DATA-03**: Team metadata (names, logos) is dynamic, not hardcoded in components
+- [x] **DATA-02**: Match data includes teams, date/time (UTC), scores, stream links, and tournament context
+- [x] **DATA-03**: Team metadata (names, logos) is dynamic, not hardcoded in components
 
 ### Schedule Display
 
@@ -66,8 +66,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | DATA-01 | Phase 1 | Pending |
-| DATA-02 | Phase 1 | Pending |
-| DATA-03 | Phase 1 | Pending |
+| DATA-02 | Phase 1 | Complete (01-01) |
+| DATA-03 | Phase 1 | Complete (01-01) |
 | SCHED-01 | Phase 2 | Pending |
 | SCHED-02 | Phase 2 | Pending |
 | SCHED-03 | Phase 2 | Pending |
@@ -88,4 +88,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-28*
-*Last updated: 2026-02-28 after roadmap creation*
+*Last updated: 2026-03-01 after Plan 01-01 execution (DATA-02, DATA-03 marked complete)*
