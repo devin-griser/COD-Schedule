@@ -26,7 +26,7 @@ Three phases take this project from nothing to a publicly-deployed CDL schedule 
   3. `schedule.json` contains 5-10 real hardcoded matches with the finalized schema (UTC ISO 8601 times, both teams, stream links, scores, tournament context)
   4. `teams.json` contains all 12 CDL franchises keyed by stable ID with logo paths and placeholder fallbacks
 **Plans**: 3 plans
-  - [~] 01-01-PLAN.md — Project scaffold + schema contracts + Cloudflare Pages deploy (Tasks 1-2 done, Task 3 awaiting human action)
+  - [x] 01-01-PLAN.md — Project scaffold + schema contracts + Cloudflare Pages deploy (complete — live at https://cod-schedule.devingriser.workers.dev/)
   - [ ] 01-02-PLAN.md — PandaScore API validation + fetch script + data source decision
   - [ ] 01-03-PLAN.md — Populate teams.json + schedule.json + team logos
 
@@ -59,6 +59,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | In progress | - |
+| 1. Foundation | 1/3 | In progress | - |
 | 2. Schedule Display | 0/TBD | Not started | - |
 | 3. Live Pipeline + Enhancements | 0/TBD | Not started | - |

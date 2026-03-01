@@ -2,7 +2,7 @@
 phase: 01-foundation
 plan: 01
 subsystem: infra
-tags: [vite, react, tailwind, typescript, cloudflare-pages]
+tags: [vite, react, tailwind, typescript, cloudflare-pages, cloudflare-workers]
 
 # Dependency graph
 requires: []
@@ -10,8 +10,9 @@ provides:
   - Vite + React 19 + Tailwind v4 project scaffold with TypeScript
   - TypeScript data contracts (Match, Team, MatchStatus, TournamentContext, TeamRef, ScheduleData, TeamsData)
   - Placeholder schedule.json and teams.json for Phase 2 population
-  - SPA routing via public/_redirects for Cloudflare Pages
+  - SPA routing via Wrangler auto-generated config (no _redirects needed)
   - Placeholder team logo PNG at /teams/placeholder.png
+  - Live Cloudflare Pages deploy at https://cod-schedule.devingriser.workers.dev/
 affects: [02-ui, 03-data]
 
 # Tech tracking
@@ -53,6 +54,7 @@ key-decisions:
   - "Slug-based team IDs (optic-texas) chosen for URL-safety and readability"
   - "Per-match streamUrl field chosen over global stream (matches CDL per-match broadcast pattern)"
   - "TournamentContext uses structured fields (name, stage, round) not flat string for filtering flexibility"
+  - "Cloudflare Pages with Wrangler handles SPA routing automatically — _redirects file not needed and caused infinite loop"
 
 patterns-established:
   - "Pattern 1: All data contracts defined in src/types/index.ts — single source of truth for Phase 1/2 boundary"
@@ -61,27 +63,27 @@ patterns-established:
 requirements-completed: [DATA-02, DATA-03]
 
 # Metrics
-duration: 2min
+duration: ~30min (Tasks 1-2 automated, Task 3 human-action checkpoint)
 completed: 2026-03-01
 ---
 
 # Phase 01 Plan 01: Project Scaffold and Data Contracts Summary
 
-**Vite + React 19 + Tailwind v4 project with typed Match/Team schemas using TeamRef | 'TBD' unions and structured TournamentContext fields**
+**Vite + React 19 + Tailwind v4 project with typed Match/Team schemas deployed live at https://cod-schedule.devingriser.workers.dev/ via Cloudflare Pages**
 
 ## Performance
 
-- **Duration:** ~2 min
+- **Duration:** ~30 min (Tasks 1-2 automated ~2 min; Task 3 human-action checkpoint)
 - **Started:** 2026-03-01T11:57:29Z
-- **Completed:** 2026-03-01T12:00:12Z
-- **Tasks:** 2 of 3 completed (Task 3 awaits human action — Cloudflare Pages connection)
+- **Completed:** 2026-03-01
+- **Tasks:** 3 of 3 completed
 - **Files modified:** 17 created, 4 modified
 
 ## Accomplishments
 - Vite + React 19 + Tailwind v4 project scaffolded and building successfully (npm run build produces dist/ with zero TypeScript errors)
 - TypeScript data contracts defined in src/types/index.ts — all 7 types exported (Match, Team, MatchStatus, TournamentContext, TeamRef, ScheduleData, TeamsData)
 - Placeholder data files (schedule.json, teams.json) ready for Plan 03 population
-- SPA routing configured for Cloudflare Pages via public/_redirects
+- Project deployed live at https://cod-schedule.devingriser.workers.dev/ via Cloudflare Pages (git-push deploy pipeline active)
 - .gitignore excludes .env* files; .env.local created with empty PANDASCORE_TOKEN
 
 ## Task Commits
@@ -90,7 +92,7 @@ Each task was committed atomically:
 
 1. **Task 1: Scaffold Vite + React + Tailwind v4 project** - `5f4a225` (feat)
 2. **Task 2: Define TypeScript data contracts for Match and Team schemas** - `82d9200` (feat)
-3. **Task 3: Connect repo to Cloudflare Pages** - AWAITING HUMAN ACTION
+3. **Task 3: Connect repo to Cloudflare Pages + fix _redirects** - `13bc526` (fix)
 
 ## Files Created/Modified
 - `src/types/index.ts` - All CDL data contracts (Match, Team, MatchStatus, TournamentContext, TeamRef, ScheduleData, TeamsData)
@@ -123,31 +125,38 @@ Each task was committed atomically:
 - **Verification:** npm run build succeeds, npm run dev starts
 - **Committed in:** 5f4a225 (Task 1 commit)
 
+**2. [Rule 1 - Bug] Removed public/_redirects to fix Cloudflare Pages infinite redirect loop**
+- **Found during:** Task 3 (Cloudflare Pages deploy)
+- **Issue:** The `_redirects` file (`/* /index.html 200`) conflicted with Wrangler's auto-generated SPA routing. Cloudflare Pages with Wrangler generates its own routing config — adding `_redirects` caused an infinite redirect loop on any non-root URL.
+- **Fix:** Removed `public/_redirects` entirely. Wrangler handles SPA routing automatically with no config file needed.
+- **Files modified:** `public/_redirects` (deleted)
+- **Verification:** User confirmed site is live at https://cod-schedule.devingriser.workers.dev/
+- **Committed in:** 13bc526 (fix(01): remove _redirects to fix Cloudflare Pages infinite loop)
+
 ---
 
-**Total deviations:** 1 auto-fixed (1 blocking)
-**Impact on plan:** Workaround transparent — identical output to in-place scaffold. No scope creep.
+**Total deviations:** 2 auto-fixed (1 blocking, 1 bug)
+**Impact on plan:** Fix 1 — workaround transparent, identical scaffold output. Fix 2 — plan's must_haves.artifacts listed `public/_redirects` as required; this was invalidated by Wrangler's routing behavior. Removal was necessary for correct deploy. No scope creep.
 
 ## Issues Encountered
 - Vite scaffolder exits if directory is non-empty. Resolved by scaffolding to temp path and copying. Expected behavior, not a bug.
+- Cloudflare Pages + Wrangler auto-generates SPA routing — `_redirects` file causes infinite redirect loop when both are present. Resolved by removing `_redirects`.
 
 ## User Setup Required
 
-**Cloudflare Pages connection required (Task 3 checkpoint).**
+Cloudflare Pages was connected manually (Task 3 human-action checkpoint — now complete):
+1. GitHub repo connected via Cloudflare Dashboard -> Workers & Pages -> Create -> Pages -> Connect to Git
+2. Build settings: Build command `npm run build`, Output directory `dist`, Production branch `main`
+3. Environment variable: `NODE_VERSION=22`
+4. Live URL: https://cod-schedule.devingriser.workers.dev/
 
-Steps:
-1. Push current project to GitHub: `git push origin main`
-2. Go to Cloudflare Dashboard -> Workers & Pages -> Create -> Pages -> Connect to Git
-3. Select the repository
-4. Build settings: Build command `npm run build`, Output directory `dist`, Production branch `main`
-5. Environment variable: `NODE_VERSION` = `22`
-6. Click "Save and Deploy" and verify "CDL Schedule" heading appears at the deployed URL
+PANDASCORE_TOKEN environment variable will be configured in Plan 01-02 after API validation.
 
 ## Next Phase Readiness
-- Project scaffold ready for Phase 2 UI components (src/types/index.ts is the Phase 1/2 boundary)
-- Data contracts locked — all interfaces defined and TypeScript-validated
-- Cloudflare Pages deploy required before marking plan fully complete (Task 3 pending user action)
-- Once deployed, Plan 02 (fetch script + data population) can begin
+- Project scaffold and deploy pipeline fully ready — git push to main auto-deploys to Cloudflare Pages
+- Data contracts locked (src/types/index.ts) — Plan 01-02 and 01-03 can proceed
+- src/data/schedule.json and src/data/teams.json are empty placeholders ready for Plan 01-03 population
+- Blocker: PandaScore CDL match depth for 2026 season is unverified — Plan 01-02 resolves this before any UI work begins
 
 ---
 *Phase: 01-foundation*

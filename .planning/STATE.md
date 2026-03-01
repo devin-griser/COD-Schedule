@@ -10,24 +10,24 @@ See: .planning/PROJECT.md (updated 2026-02-28)
 ## Current Position
 
 Phase: 1 of 3 (Foundation)
-Plan: 1 of 3 in current phase
-Status: In progress — awaiting Cloudflare Pages connection (Task 3 human-action checkpoint)
-Last activity: 2026-03-01 — Plan 01-01 tasks 1-2 complete, Task 3 awaiting user action
+Plan: 2 of 3 in current phase
+Status: In progress — Plan 01-01 complete, next: Plan 01-02 (PandaScore API validation)
+Last activity: 2026-03-01 — Plan 01-01 all 3 tasks complete, site live at https://cod-schedule.devingriser.workers.dev/
 
-Progress: [██░░░░░░░░] 11%
+Progress: [███░░░░░░░] 22%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0 (01-01 partially complete — awaiting Task 3)
-- Average duration: —
-- Total execution time: ~2 min (Tasks 1-2)
+- Total plans completed: 1
+- Average duration: ~30 min
+- Total execution time: ~30 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation | 0/3 | — | — |
+| 01-foundation | 1/3 | ~30 min | ~30 min |
 
 **Recent Trend:**
 - Last 5 plans: —
@@ -50,18 +50,18 @@ Recent decisions affecting current work:
 - Plan 01-01: Slug-based team IDs (optic-texas) for URL-safety and readability
 - Plan 01-01: TournamentContext uses structured fields (name, stage, round) not flat string for filtering flexibility
 - Plan 01-01: Per-match streamUrl supports CDL per-match broadcast pattern
+- Plan 01-01: Cloudflare Pages + Wrangler auto-generates SPA routing — public/_redirects not needed and causes infinite redirect loop
 
 ### Pending Todos
 
-- Connect GitHub repo to Cloudflare Pages (Task 3 of Plan 01-01 — human action required)
+- None (Plan 01-01 fully complete)
 
 ### Blockers/Concerns
 
-- Phase 1 (blocking): PandaScore CDL match depth for 2026 season is unverified at runtime. If PandaScore returns no CDL matches, fallback path (Liquipedia API or manual JSON) must be chosen before Phase 2 starts. This decision gates all UI work.
-- Plan 01-01 Task 3: Cloudflare Pages connection requires user to connect GitHub repo via Cloudflare Dashboard.
+- Phase 1 (blocking): PandaScore CDL match depth for 2026 season is unverified at runtime. If PandaScore returns no CDL matches, fallback path (Liquipedia API or manual JSON) must be chosen before Phase 2 starts. This decision gates all UI work. Addressed in Plan 01-02.
 
 ## Session Continuity
 
 Last session: 2026-03-01
-Stopped at: Plan 01-01 Task 3 checkpoint — waiting for Cloudflare Pages connection
-Resume file: .planning/phases/01-foundation/01-01-SUMMARY.md
+Stopped at: Completed Plan 01-01 — next is Plan 01-02 (PandaScore API validation)
+Resume file: .planning/phases/01-foundation/01-02-PLAN.md
