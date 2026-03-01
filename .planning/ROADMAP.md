@@ -10,7 +10,7 @@ Three phases take this project from nothing to a publicly-deployed CDL schedule 
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Foundation** - Data schema, source validation, project scaffold, and static fixture data
+- [x] **Phase 1: Foundation** - Data schema, source validation, project scaffold, and static fixture data (completed 2026-03-01)
 - [ ] **Phase 2: Schedule Display** - Full UI built against fixture data, deployed publicly
 - [ ] **Phase 3: Live Pipeline + Enhancements** - Automated data refresh and display enhancements
 
@@ -59,6 +59,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/3 | In progress | - |
+| 1. Foundation | 3/3 | Complete   | 2026-03-01 |
 | 2. Schedule Display | 0/TBD | Not started | - |
 | 3. Live Pipeline + Enhancements | 0/TBD | Not started | - |
